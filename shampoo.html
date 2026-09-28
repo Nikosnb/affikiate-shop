@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Shampoo - TonnyShop</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:'Segoe UI', Arial;
+  background:#f5f5f5;
+}
+
+/* HEADER */
+header{
+  background:white;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo a{
+  text-decoration:none;
+  color:red;
+  font-size:32px;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  color:#666;
+  font-size:18px;
+}
+
+/* SHOP LAYOUT */
+.shop-layout{
+  display:flex;
+  gap:20px;
+  padding:20px;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:240px;
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  height:fit-content;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.sidebar h3{
+  margin-bottom:20px;
+}
+
+.sidebar a{
+  display:block;
+  text-decoration:none;
+  color:#333;
+  margin-bottom:12px;
+  transition:0.3s;
+}
+
+.sidebar a:hover{
+  color:red;
+  transform:translateX(5px);
+}
+
+/* PRODUCTS */
+.products{
+  flex:1;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:25px;
+}
+
+/* CARD */
+.card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  padding:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+.card h3{
+  margin-top:15px;
+}
+
+.price{
+  color:red;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.card button{
+  width:100%;
+  padding:12px;
+  border:none;
+  background:black;
+  color:white;
+  border-radius:10px;
+  cursor:pointer;
+  margin-top:10px;
+  transition:0.3s;
+}
+
+.card button:hover{
+  background:red;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+.shop-layout{
+  flex-direction:column;
+}
+
+.sidebar{
+  width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+  <div class="logo">
+    <a href="index.html">TonnyShop</a>
+  </div>
+
+  <div id="data">
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <nav>
+
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Search shampoo..."
+    >
+
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="checkout.html">Cart 🛒</a>
+    <a href="favorites.html">Favorites ❤️</a>
+
+  </nav>
+
+</header>
+
+<section class="hero">
+  <h1>🧼 Shampoo Collection</h1>
+  <p>Professional shampoos for healthy, shiny and strong hair.</p>
+</section>
+
+<div class="shop-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <h3>👕 Categories</h3>
+
+    <div class="category-group">
+      <h4>Men</h4>
+
+      <a href="file:///C:/Users/nikos/OneDrive/Desktop/TonnyShop/jeans.html">👖 Jeans</a>
+      <a href="C:\Users\nikos\OneDrive\Desktop\TonnyShop\T-shirts.html">👕 T-Shirts</a>
+      <a href="jackets.html">🧥 Jackets</a>
+      <a href="hats.html">🧢 Hats</a>
+      <a href="shoes.html">👟 Shoes</a>
+      <a href="tanks-top.html">🎽 Tank Tops</a>
+    </div>
+
+    <div class="category-group">
+      <h4>Women</h4>
+
+      <a href="women-jeans.html">👖 Jeans</a>
+      <a href="blouze.html">👚 Blouses</a>
+      <a href="women-jackets.html">🧥 Jackets</a>
+      <a href="women-bags.html">👜 Bags</a>
+      <a href="women-shoes.html">👠 Shoes</a>
+      <a href="tank-tops.html">👗 Dresses</a>
+    </div>
+
+    <div class="category-group">
+  <h4>Kids</h4>
+
+  <a href="kids-jeans.html">🧒 Kids Jeans</a>
+  <a href="kids-t-shirts.html">👕 Kids T-Shirts</a>
+  <a href="kids-jackets.html">🧥 Kids Jackets</a>
+  <a href="kids-shoes.html">👟 Kids Shoes</a>
+  <a href="kids-hats.html">🧢 Kids Hats</a>
+</div>
+
+<div class="category-group">
+  <h4>Accessories</h4>
+
+  <a href="watches.html">⌚ Watches</a>
+  <a href="smart-watches.html">📱 Smart Watches</a>
+  <a href="rings.html">💍 Rings</a>
+  <a href="bags.html">👜 Bags</a>
+  <a href="glasses.html">🕶️ Glasses</a>
+</div>
+
+<div class="category-group">
+  <h4>Beauty</h4>
+
+  <a href="creams.html">🧴 Creams</a>
+  <a href="shampoo.html">🧼 Shampoo</a>
+  <a href="makeup.html">💄 Makeup</a>
+  <a href="skin-care.html">🧴 Skin Care</a>
+  <a href="grooming.html">🪒 Grooming</a>
+</div>
+
+<div class="sidebar-banner">
+
+  <img src="https://picsum.photos/300/400?hair">
+
+  <h3>🔥 Hair Care Sale</h3>
+
+  <p>
+    Up to 50% OFF on shampoos,
+    hair care and beauty products.
+  </p>
+
+  <button>Shop Now</button>
+
+</div>
+
+  </aside>
+
+  <!-- PRODUCTS -->
+  <div class="products">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?q=80&w=1200&auto=format&fit=crop">
+      <h3>Luxury Hair Shampoo</h3>
+      <p class="price">$24</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1601612628452-9e99ced43524?q=80&w=1200&auto=format&fit=crop">
+      <h3>Natural Herbal Shampoo</h3>
+      <p class="price">$19</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=1200&auto=format&fit=crop">
+      <h3>Professional Care Shampoo</h3>
+      <p class="price">$29</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556228578-dd6c2d4d6c2f?q=80&w=1200&auto=format&fit=crop">
+      <h3>Premium Repair Shampoo</h3>
+      <p class="price">$34</p>
+      <button>Add to Cart</button>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

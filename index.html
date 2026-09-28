@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width-device-width, initial-scale=1.0">
+<title>TonnyShop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo"><a href="index.html">TonnyShop</a></div>
+    <div id="data">
+  <a href="login.html">Login </a>
+<a href="register.html">Register </a>
+<a href="#" onclick="logout()">Logout </a>
+    </div>
+  
+  <nav>
+      <input 
+  type="text" 
+  id="searchInput" 
+  placeholder="Search products..."
+  onkeyup="searchProducts()"
+/>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="checkout.html">Cart 🛒</a>
+    <a href="favorites.html">Favorites ❤️</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Welcome to TonnyShop 🛍️</h1>
+  <p>Feel at home. Shop easy. Shop smart.</p>
+</section>
+
+<div class="slider">
+  <img src="C:\Users\nikos\OneDrive\Desktop\TonnyShop\img\elek.jpg" class="slide active">
+  <img src="C:\Users\nikos\OneDrive\Desktop\TonnyShop\img\komplekt.jpg"  class="slide">
+  <img src="C:\Users\nikos\OneDrive\Desktop\TonnyShop\img\pantalon.jpg" class="slide">
+</div>
+
+<!-- TRUST -->
+<div class="trust">
+  <p>✅ Secure Payment</p>
+  <p>🚚 Fast Delivery</p>
+  <p>↩️ Easy Returns</p>
+</div>
+
+<section class="promo-slider">
+
+  <div class="promo-track">
+
+    <img src="https://picsum.photos/300?1">
+    <img src="https://picsum.photos/300?2">
+    <img src="https://picsum.photos/300?3">
+    <img src="https://picsum.photos/300?4">
+    <img src="https://picsum.photos/300?5">
+
+    <!-- duplicated for infinite effect -->
+
+    <img src="https://picsum.photos/300?1">
+    <img src="https://picsum.photos/300?2">
+    <img src="https://picsum.photos/300?3">
+    <img src="https://picsum.photos/300?4">
+    <img src="https://picsum.photos/300?5">
+
+  </div>
+
+</section>
+
+<h2 style="padding:20px;">🔥 Trending Products</h2>
+
+<div class="shop-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <h3>👕 Categories</h3>
+
+    <div class="category-group">
+      <h4>Men</h4>
+
+      <a href="file:///C:/Users/nikos/OneDrive/Desktop/TonnyShop/jeans.html">👖 Jeans</a>
+      <a href="C:\Users\nikos\OneDrive\Desktop\TonnyShop\T-shirts.html">👕 T-Shirts</a>
+      <a href="jackets.html">🧥 Jackets</a>
+      <a href="hats.html">🧢 Hats</a>
+      <a href="shoes.html">👟 Shoes</a>
+      <a href="tanks-top.html">🎽 Tank Tops</a>
+    </div>
+
+    <div class="category-group">
+      <h4>Women</h4>
+
+      <a href="women-jeans.html">👖 Jeans</a>
+      <a href="blouze.html">👚 Blouses</a>
+      <a href="women-jackets.html">🧥 Jackets</a>
+      <a href="women-bags.html">👜 Bags</a>
+      <a href="women-shoes.html">👠 Shoes</a>
+      <a href="tank-tops.html">👗 Dresses</a>
+    </div>
+
+    <div class="category-group">
+  <h4>Kids</h4>
+
+  <a href="kids-jeans.html">🧒 Kids Jeans</a>
+  <a href="kids-t-shirts.html">👕 Kids T-Shirts</a>
+  <a href="kids-jackets.html">🧥 Kids Jackets</a>
+  <a href="kids-shoes.html">👟 Kids Shoes</a>
+  <a href="kids-hats.html">🧢 Kids Hats</a>
+</div>
+
+<div class="category-group">
+  <h4>Accessories</h4>
+
+  <a href="watches.html">⌚ Watches</a>
+  <a href="smart-watches.html">📱 Smart Watches</a>
+  <a href="rings.html">💍 Rings</a>
+  <a href="bags.html">👜 Bags</a>
+  <a href="glasses.html">🕶️ Glasses</a>
+</div>
+
+<div class="category-group">
+  <h4>Beauty</h4>
+
+  <a href="creams.html">🧴 Creams</a>
+  <a href="shampoo.html">🧼 Shampoo</a>
+  <a href="makeup.html">💄 Makeup</a>
+  <a href="skin-care.html">🧴 Skin Care</a>
+  <a href="grooming.html">🪒 Grooming</a>
+</div>
+
+<div class="sidebar-banner">
+
+  <img src="https://picsum.photos/300/400?fashion">
+
+  <h3>🔥 Summer Sale</h3>
+
+  <p>
+    Up to 50% OFF on fashion,
+    accessories and beauty products.
+  </p>
+
+  <button>Shop Now</button>
+
+</div>
+
+  </aside>
+
+  <!-- PRODUCTS -->
+  <div class="container" id="products"></div>
+  
+
+</div>
+
+
+<script src="script.js"></script>
+
+<!-- WHY CHOOSE US -->
+
+<section class="why-us">
+
+  <h2>Why Shop With Us?</h2>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <h3>🚚 Fast Delivery</h3>
+      <p>Worldwide shipping in just a few days.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>🔒 Secure Payment</h3>
+      <p>Your payments are fully protected.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>❤️ Trusted by Customers</h3>
+      <p>Thousands of happy shoppers every month.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>⭐ Premium Quality</h3>
+      <p>Only carefully selected products.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+  <h2>Join Our Newsletter</h2>
+
+  <p>
+    Get exclusive offers, discounts and new arrivals.
+  </p>
+
+  <div class="newsletter-box">
+
+    <input type="email" placeholder="Enter your email">
+
+    <button>Subscribe</button>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-content">
+
+    <div>
+      <h3>TonnyShop</h3>
+      <p>Premium shopping experience.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div>
+      <h4>Support</h4>
+
+      <a href="#">FAQ</a>
+      <a href="#">Shipping</a>
+      <a href="#">Returns</a>
+    </div>
+
+  </div>
+
+  <p class="copyright">
+    © 2026 TonnyShop. All rights reserved.
+  </p>
+
+</footer>
+
+<!-- CHATBOT -->
+<div id="chatbot">
+  <div id="chat-header" onclick="toggleChat()">💬 TonnyBot</div>
+
+  <div id="chat-body">
+    <div id="messages"></div>
+
+    <input id="userInput" placeholder="Ask something..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script>
+// =======================
+// TONNYBOT NEXT LEVEL
+// =======================
+
+let userLang = "en, lt";
+
+function detectLanguage(msg) {
+  if (/[а-я]/i.test(msg)) return "bg";
+  if (msg.includes("hallo") || msg.includes("preis")) return "de";
+  return "en";
+}
+
+const botReplies = {
+  en: {
+    greet: "Hey 👋 How can I help you?",
+    buttons: ["📦 Delivery", "🛒 Order", "💰 Price"],
+    delivery: "📦 Your order arrives in 7–15 days 😊",
+    order: "🛒 Just add product → checkout → done!",
+    price: "💰 Check price on product page",
+    typing: "Typing..."
+  },
+  bg: {
+    greet: "Здрасти 👋 Как да помогна?",
+    buttons: ["📦 Доставка", "🛒 Поръчка", "💰 Цена"],
+    delivery: "📦 Доставката е 7–15 дни 😊",
+    order: "🛒 Добави в количката и поръчай",
+    price: "💰 Виж цената при продукта",
+    typing: "Пише..."
+  },
+  de: {
+    greet: "Hallo 👋 Wie kann ich helfen?",
+    buttons: ["📦 Lieferung", "🛒 Bestellung", "💰 Preis"],
+    delivery: "📦 Lieferung dauert 7–15 Tage 😊",
+    order: "🛒 Produkt wählen → bestellen",
+    price: "💰 Preis auf Produktseite",
+    typing: "Schreibt..."
+  }
+};
+
+function toggleChat() {
+  let body = document.getElementById("chat-body");
+  body.style.display = body.style.display === "none" ? "block" : "none";
+}
+
+function addMessage(sender, text) {
+  const messages = document.getElementById("messages");
+  messages.innerHTML += `<p><b>${sender}:</b> ${text}</p>`;
+  messages.scrollTop = messages.scrollHeight;
+}
+
+function botReply(text) {
+  const messages = document.getElementById("messages");
+
+  let typing = document.createElement("p");
+  typing.innerHTML = `<b>TonnyBot:</b> ${botReplies[userLang].typing}`;
+  messages.appendChild(typing);
+
+  messages.scrollTop = messages.scrollHeight;
+
+  setTimeout(() => {
+    typing.innerHTML = `<b>TonnyBot:</b> ${text}`;
+  }, 1000);
+}
+
+function showButtons() {
+  const chatBody = document.getElementById("chat-body");
+
+  let oldButtons = document.getElementById("quickButtons");
+  if (oldButtons) oldButtons.remove();
+
+  let div = document.createElement("div");
+  div.id = "quickButtons";
+  div.style.marginTop = "10px";
+
+  botReplies[userLang].buttons.forEach(btn => {
+    let button = document.createElement("button");
+    button.innerText = btn;
+    button.style.margin = "5px";
+    button.style.padding = "5px";
+    button.onclick = () => handleQuick(btn);
+    div.appendChild(button);
+  });
+
+  chatBody.appendChild(div);
+}
+
+function handleQuick(text) {
+  addMessage("You", text);
+
+  if (text.includes("Delivery") || text.includes("Доставка") || text.includes("Lieferung")) {
+    botReply(botReplies[userLang].delivery);
+  }
+
+  else if (text.includes("Order") || text.includes("Поръч") || text.includes("Bestellung")) {
+    botReply(botReplies[userLang].order);
+  }
+
+  else if (text.includes("Price") || text.includes("Цена") || text.includes("Preis")) {
+    botReply(botReplies[userLang].price);
+  }
+}
+
+function sendMessage() {
+  let input = document.getElementById("userInput");
+  let msg = input.value.trim();
+
+  if (!msg) return;
+
+  addMessage("You", msg);
+
+  userLang = detectLanguage(msg);
+
+  let reply = botReplies[userLang].greet;
+
+  botReply(reply);
+
+  input.value = "";
+
+  showButtons();
+}
+
+window.onload = function () {
+  setTimeout(() => {
+    addMessage("TonnyBot", "👋 Welcome! Choose an option below 😊");
+    showButtons();
+  }, 500);
+};
+</script>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let current = 0;
+
+function changeSlide() {
+  slides[current].classList.remove("active");
+
+  current++;
+  if (current >= slides.length) current = 0;
+
+  slides[current].classList.add("active");
+}
+
+setInterval(changeSlide, 3000);
+</script> 
+</body>
+</html>

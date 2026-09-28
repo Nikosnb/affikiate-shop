@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Women Jackets | TonnyShop</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* CATEGORY PRODUCTS */
+.category-products{
+    width:100%;
+    padding:40px 8%;
+}
+
+/* GRID */
+.products-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+/* PRODUCT CARD */
+.product-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+    text-align:center;
+    padding-bottom:20px;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+/* IMAGE */
+.product-card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+/* TITLE */
+.product-card h3{
+    margin-top:15px;
+}
+
+/* PRICE */
+.product-card .price{
+    color:red;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* BUTTON */
+.product-card button{
+    margin-top:15px;
+    padding:12px 20px;
+    border:none;
+    background:black;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.product-card button:hover{
+    background:red;
+}
+
+/* SHOP LAYOUT */
+.shop-layout{
+    display:flex;
+    gap:25px;
+    padding:20px;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    height:fit-content;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.sidebar h3{
+    margin-bottom:20px;
+}
+
+.category-group{
+    margin-bottom:25px;
+}
+
+.category-group h4{
+    margin-bottom:10px;
+    color:red;
+}
+
+.category-group a{
+    display:block;
+    margin-bottom:10px;
+    text-decoration:none;
+    color:#444;
+    transition:0.3s;
+}
+
+.category-group a:hover{
+    color:red;
+    transform:translateX(5px);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+    .shop-layout{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    .products-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+  <div class="logo">
+    <a href="index.html">TonnyShop</a>
+  </div>
+
+  <div id="data">
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <nav>
+
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Search jackets..."
+    >
+
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="checkout.html">Cart 🛒</a>
+    <a href="favorites.html">Favorites ❤️</a>
+
+  </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="category-page-hero">
+
+    <h1>Women Jackets Collection 🧥</h1>
+
+    <p>Modern women jackets for every season</p>
+
+</section>
+
+<!-- SHOP -->
+<div class="shop-layout">
+
+<!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <h3>👕 Categories</h3>
+
+    <div class="category-group">
+      <h4>Men</h4>
+
+      <a href="file:///C:/Users/nikos/OneDrive/Desktop/TonnyShop/jeans.html">👖 Jeans</a>
+      <a href="T-Shirts.html">👕 T-Shirts</a>
+      <a href="jackets.html">🧥 Jackets</a>
+      <a href="hats.html">🧢 Hats</a>
+      <a href="shoes.html">👟 Shoes</a>
+      <a href="tanks-top.html">🎽 Tank Tops</a>
+    </div>
+
+    <div class="category-group">
+      <h4>Women</h4>
+
+      <a href="women-jeans.html">👖 Jeans</a>
+      <a href="blouze.html">👚 Blouses</a>
+      <a href="women-jackets.html">🧥 Jackets</a>
+      <a href="women-bags.html">👜 Bags</a>
+      <a href="women-shoes.html">👠 Shoes</a>
+      <a href="tank-tops.html">👗 Dresses</a>
+    </div>
+
+    <div class="category-group">
+  <h4>Kids</h4>
+
+  <a href="kids-jeans.html">🧒 Kids Jeans</a>
+  <a href="kids-t-shirts.html">👕 Kids T-Shirts</a>
+  <a href="kids-jackets.html">🧥 Kids Jackets</a>
+  <a href="kids-shoes.html">👟 Kids Shoes</a>
+  <a href="kids-hats.html">🧢 Kids Hats</a>
+</div>
+
+<div class="category-group">
+  <h4>Accessories</h4>
+
+  <a href="watches.html">⌚ Watches</a>
+  <a href="smartwatches.html">📱 Smart Watches</a>
+  <a href="rings.html">💍 Rings</a>
+  <a href="bags.html">👜 Bags</a>
+  <a href="glasses.html">🕶️ Glasses</a>
+</div>
+
+<div class="category-group">
+  <h4>Beauty</h4>
+
+  <a href="#">🧴 Creams</a>
+  <a href="#">🧼 Shampoo</a>
+  <a href="#">💄 Makeup</a>
+  <a href="#">🧴 Skin Care</a>
+  <a href="#">🪒 Grooming</a>
+</div>
+
+<div class="sidebar-banner">
+
+  <img src="https://picsum.photos/300/400?fashion">
+
+  <h3>🔥 Summer Sale</h3>
+
+  <p>
+    Up to 50% OFF on fashion,
+    accessories and beauty products.
+  </p>
+
+  <button>Shop Now</button>
+
+</div>
+
+  </aside>
+
+<!-- PRODUCTS -->
+<section class="category-products">
+
+<div class="products-grid">
+
+    <!-- PRODUCT -->
+    <div class="product-card">
+
+        <img src="img/women-jacket1.jpg">
+
+        <h3>Black Leather Jacket</h3>
+
+        <p class="price">$120</p>
+
+        <p>Elegant premium black leather jacket.</p>
+
+        <button>Add To Cart</button>
+
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="product-card">
+
+        <img src="img/women-jacket2.jpg">
+
+        <h3>Winter Fashion Jacket</h3>
+
+        <p class="price">$145</p>
+
+        <p>Warm and stylish winter jacket.</p>
+
+        <button>Add To Cart</button>
+
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="product-card">
+
+        <img src="img/women-jacket3.jpg">
+
+        <h3>Pink Casual Jacket</h3>
+
+        <p class="price">$98</p>
+
+        <p>Modern pink casual jacket.</p>
+
+        <button>Add To Cart</button>
+
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="product-card">
+
+        <img src="img/women-jacket4.jpg">
+
+        <h3>Luxury White Jacket</h3>
+
+        <p class="price">$160</p>
+
+        <p>Luxury white premium jacket.</p>
+
+        <button>Add To Cart</button>
+
+    </div>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-content">
+
+    <div>
+      <h3>TonnyShop</h3>
+      <p>Premium shopping experience.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div>
+      <h4>Support</h4>
+
+      <a href="#">FAQ</a>
+      <a href="#">Shipping</a>
+      <a href="#">Returns</a>
+    </div>
+
+  </div>
+
+  <p class="copyright">
+    © 2026 TonnyShop. All rights reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>

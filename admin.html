@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 style="padding:20px;">Admin Panel</h1>
+
+<h2 style="padding:20px;">Orders</h2>
+
+<div id="orders" style="padding:20px;"></div>
+
+<script>
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+const container = document.getElementById("orders");
+
+if (orders.length === 0) {
+  container.innerHTML = "<p>No orders yet</p>";
+}
+
+orders.forEach((o, index) => {
+  let products = o.products.map(p => p.name).join(", ");
+
+  container.innerHTML += `
+    <div style="background:white; padding:15px; margin-bottom:10px;">
+      <h3>Order #${index + 1}</h3>
+      <p><b>Name:</b> ${o.name}</p>
+      <p><b>Address:</b> ${o.address}</p>
+      <p><b>Products:</b> ${products}</p>
+      <p><b>Status:</b> ${o.status}</p>
+      <button onclick="ship(${index})">Mark as shipped</button>
+    </div>
+  `;
+});
+
+function ship(i) {
+  orders[i].status = "Shipped";
+  localStorage.setItem("orders", JSON.stringify(orders));
+  location.reload();
+}
+</script>
+
+</body>
+</html>

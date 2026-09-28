@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TonnyShop Gallery</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f5f5f5;
+}
+
+/* HEADER */
+
+.gallery-header{
+  text-align:center;
+  padding:50px 20px;
+  background:black;
+  color:white;
+}
+
+.gallery-header h1{
+  font-size:50px;
+  margin-bottom:10px;
+}
+
+.gallery-header p{
+  color:#ccc;
+  font-size:18px;
+}
+
+/* FILTERS */
+
+.filters{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  padding:30px;
+}
+
+.filters button{
+  padding:12px 25px;
+  border:none;
+  background:white;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+  font-weight:bold;
+}
+
+.filters button a{
+    text-decoration: none;
+    color: black;
+}
+
+.filters button a:hover{
+  background:black;
+  color:white;
+}
+
+/* GALLERY GRID */
+
+.gallery-grid{
+  width:90%;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:25px;
+
+  padding-bottom:50px;
+}
+
+/* CARD */
+
+.gallery-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
+  background:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.4s;
+}
+
+.gallery-card:hover{
+  transform:translateY(-10px);
+}
+
+/* IMAGE */
+
+.gallery-card img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  transition:0.5s;
+}
+
+.gallery-card:hover img{
+  transform:scale(1.1);
+}
+
+/* OVERLAY */
+
+.overlay{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+
+  background:
+  linear-gradient(
+    transparent,
+    rgba(0,0,0,0.9)
+  );
+
+  color:white;
+
+  padding:20px;
+
+  transform:translateY(100%);
+  transition:0.4s;
+}
+
+.gallery-card:hover .overlay{
+  transform:translateY(0);
+}
+
+.overlay h3{
+  margin:0;
+}
+
+.overlay p{
+  color:#ddd;
+  font-size:14px;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.9);
+
+  display:none;
+
+  justify-content:center;
+  align-items:center;
+
+  z-index:9999;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:20px;
+}
+
+.lightbox span{
+  position:absolute;
+  top:30px;
+  right:40px;
+  color:white;
+  font-size:40px;
+  cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+    
+
+<!-- HEADER -->
+
+<header>
+     <div class="logo"><a href="index.html">TonnyShop</a></div>
+    <div id="data">
+  <a href="login.html">Login </a>
+<a href="register.html">Register </a>
+<a href="#" onclick="logout()">Logout </a>
+    </div>
+  
+  <nav>
+      <input 
+  type="text" 
+  id="searchInput" 
+  placeholder="Search products..."
+  onkeyup="searchProducts()"
+/>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="checkout.html">Cart 🛒</a>
+    <a href="favorites.html">Favorites ❤️</a>
+  </nav>
+</header>
+
+<section class="gallery-header">
+
+  <h1>TonnyShop Gallery</h1>
+
+  <p>
+    Explore our premium collections
+  </p>
+
+</section>
+
+
+<!-- FILTERS -->
+
+<div class="filters">
+
+  <button><a href="#">All</a></button>
+  <button><a href="#">Fashion</a></button>
+  <button><a href="#">Watches</a></button>
+  <button><a href="#">Shoes</a></button>
+  <button><a href="#">Beauty</a></button>
+
+</div>
+
+<!-- GALLERY -->
+
+<div class="gallery-grid">
+
+  <!-- CARD -->
+
+  <div class="gallery-card">
+
+    <img src="img\elek.jpg"
+    onclick="openLightbox(this.src)">
+
+    <div class="overlay">
+      <h3>Luxury Fashion</h3>
+      <p>Premium collection 2026</p>
+    </div>
+
+  </div>
+
+  <!-- CARD -->
+
+  <div class="gallery-card">
+
+    <img src="https://picsum.photos/500/701?watch"
+    onclick="openLightbox(this.src)">
+
+    <div class="overlay">
+      <h3>Elegant Watch</h3>
+      <p>Modern luxury watches</p>
+    </div>
+
+  </div>
+
+  <!-- CARD -->
+
+  <div class="gallery-card">
+
+    <img src="https://picsum.photos/500/702?shoes"
+    onclick="openLightbox(this.src)">
+
+    <div class="overlay">
+      <h3>Street Sneakers</h3>
+      <p>Comfort meets style</p>
+    </div>
+
+  </div>
+
+  <!-- CARD -->
+
+  <div class="gallery-card">
+
+    <img src="https://picsum.photos/500/703?beauty"
+    onclick="openLightbox(this.src)">
+
+    <div class="overlay">
+      <h3>Beauty Products</h3>
+      <p>Glow & skin care</p>
+    </div>
+
+  </div>
+
+  <!-- CARD -->
+
+  <div class="gallery-card">
+
+    <img src="https://picsum.photos/500/704?bag"
+    onclick="openLightbox(this.src)">
+
+    <div class="overlay">
+      <h3>Luxury Bags</h3>
+      <p>New arrivals</p>
+    </div>
+
+  </div>
+
+  <!-- CARD -->
+
+  <div class="gallery-card">
+
+    <img src="https://picsum.photos/500/705?clothes"
+    onclick="openLightbox(this.src)">
+
+    <div class="overlay">
+      <h3>Modern Outfit</h3>
+      <p>Trending now</p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+  <span onclick="closeLightbox()">
+    &times;
+  </span>
+
+  <img id="lightbox-img">
+
+</div>
+
+<script>
+
+function openLightbox(src){
+
+  document.getElementById("lightbox")
+  .style.display = "flex";
+
+  document.getElementById("lightbox-img")
+  .src = src;
+}
+
+function closeLightbox(){
+
+  document.getElementById("lightbox")
+  .style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
